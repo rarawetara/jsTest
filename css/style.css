@@ -1,0 +1,6 @@
+.calc-text {
+  color: blue;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+}
