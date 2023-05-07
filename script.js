@@ -8,8 +8,8 @@ if (!year) alert('Its a shame that you didnt specify year of birth');
    let newYear = year ? `${'You age'} ${2023 - year}`:'' ;
 
  
- const newCity = city 
-switch (newCity){
+
+switch (city){
  case '':
     alert(`${newYear}`);
    break;
@@ -25,7 +25,7 @@ switch (newCity){
   case 'warshawa':
     alert( `${newYear} ${'lucky you live in Poland'}` );
     break;
-  
+  default : alert('no  existing city');
 }
 
 
@@ -42,6 +42,7 @@ switch (newCity){
   case 'box':
     alert( 'You gonna be a great boxer' );
     break;
- 
+   default : alert('no  existing sport');
 }
+
 
