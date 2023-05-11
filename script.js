@@ -1,48 +1,44 @@
-const city = prompt("enter  your city?" );
-if (!city) alert('Its a shame that you didnt specify  city');
- let favoritesport = prompt('enter your favorite sport');
-if (!favoritesport) alert('Its a shame that you didnt specify favorite sport');
 
-  const  year = +prompt('enter your year of birth');
-if (!year) alert('Its a shame that you didnt specify year of birth');
-   let newYear = year ? `${'You age'} ${2023 - year}`:'' ;
+//#1//
+for (let i = 20; i <= 30; i+=0.5){
+  console.log(i)
+  }
 
- 
-
-switch (city){
- case '':
-    alert(`${newYear}`);
-   break;
-
-  case 'kiev':
-    alert(`${newYear} ${'lucky you live in Ukraine'}`);
- 
-   break;
-  case 'vien':
-    alert( `${newYear} ${'lucky you live in Austria'}`);
-    break;
-
-  case 'warshawa':
-    alert( `${newYear} ${'lucky you live in Poland'}` );
-    break;
-  default : alert('no  existing city');
+//#2//
+const table = {};
+for (let i = 20; i <= 100; i+=10){
+  for (let j = 27; j <= 27; j++){
+    if(!table[i]) {
+      table[i] = [];
+    }
+    table[i].push(i*j);
+  }
 }
 
-
-
- switch (favoritesport) {
-  case 'football':
-    alert( 'You gonna be a great football player' );
-    break;
-
-  case 'basketball':
-    alert( 'You gonna be a great basketball player' );
-    break;
-
-  case 'box':
-    alert( 'You gonna be a great boxer' );
-    break;
-   default : alert('no  existing sport');
+//#3//
+let n = 500;
+let str = "";
+for (let i = 1; i <= 100; i++) {
+  sqrNum = i ** 2;
+  if (sqrNum >= n) break;
+  str += ${i} => ${sqrNum}; ;
 }
+console.log(str);
+//#4//
+let n = 10;
+next:
+for (let i = 1; i <= n; i++) {  
+  for (let j = 2; j < i; j++) { 
+    if (i % j == 0) continue next;
+  }
 
+  console.log( i ); 
+}
+//#5//
 
+let number = parseInt(prompt("whrite number: "));
+if (number % 3 === 0 && number ) {
+alert("you can");
+ }   else {
+   alert("you cant");
+}
