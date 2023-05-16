@@ -1,15 +1,28 @@
-function generateKey(length, characters) {
-  let key = '';
-  const charactersLength = characters.length;
 
-  for (let i = 0; i < length; i++) {
-    const randomIndex = Math.floor(Math.random() * charactersLength);
-    key += characters.charAt(randomIndex);
-  }
-
-  return key;
+const array =[];
+let element ;
+do{
+  element = prompt('add element');
+if (element)
+array.push(element);
+}
+while(element)
+console.log(array);
+function compareNumeric(a, b) {  
+  if (a > b) return 1; 
+  if (a == b) return 0; 
+  if (a < b) return -1;
 }
 
-const characters = 'abcdefghijklmnopqrstuvwxyz0123456789';
-const key = generateKey(16, characters);
-console.log(key);
+
+
+function compareNumeric(a, b) {  
+  return a - b;
+}
+
+array.sort(compareNumeric);
+
+alert(array);  
+
+array.splice(1, 1); 
+alert(array);
