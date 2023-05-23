@@ -1,16 +1,16 @@
-function createSum(initialValue) {
-  let sum = initialValue;
-
-  function inner(num) {
-    sum += num;
-    return sum;
+let ladder = {
+  step: 0,
+  up: function () {
+    this.step++;
+    return this;
+  },
+  down: function () {
+    this.step--;
+    return this;
+  },
+  showStep: function () {
+    console.log(this.step);
+    return this;
   }
-
-  return inner;
-}
-
-const sum = createSum(0);
-
-console.log(sum(3)); 
-console.log(sum(5)); 
-console.log(sum(20));
+};
+ladder.up().up().down().showStep();
