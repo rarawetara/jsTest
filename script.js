@@ -1,11 +1,16 @@
-function pow(num, degree) {
-  if (degree === 0) {
-    return 1;
-  } else if (degree > 0) {
-    return num * pow(num, degree - 1);
-  } else {
-    return 1 / pow(num, -degree);
+function createSum(initialValue) {
+  let sum = initialValue;
+
+  function inner(num) {
+    sum += num;
+    return sum;
   }
+
+  return inner;
 }
-let result = pow(2, 3); 
-console.log(result);
+
+const sum = createSum(0);
+
+console.log(sum(3)); 
+console.log(sum(5)); 
+console.log(sum(20));
