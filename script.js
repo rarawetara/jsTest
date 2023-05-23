@@ -1,28 +1,11 @@
-
-const array =[];
-let element ;
-do{
-  element = prompt('add element');
-if (element)
-array.push(element);
+function pow(num, degree) {
+  if (degree === 0) {
+    return 1;
+  } else if (degree > 0) {
+    return num * pow(num, degree - 1);
+  } else {
+    return 1 / pow(num, -degree);
+  }
 }
-while(element)
-console.log(array);
-function compareNumeric(a, b) {  
-  if (a > b) return 1; 
-  if (a == b) return 0; 
-  if (a < b) return -1;
-}
-
-
-
-function compareNumeric(a, b) {  
-  return a - b;
-}
-
-array.sort(compareNumeric);
-
-alert(array);  
-
-array.splice(1, 1); 
-alert(array);
+let result = pow(2, 3); 
+console.log(result);
